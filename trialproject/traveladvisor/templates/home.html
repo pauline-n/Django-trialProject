@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <nav>
+        <div>
+            home
+        </div>
+    </nav>
+    <h1>Hello Travel Team!</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, quae alias vel quam ullam recusandae, laboriosam a,
+         totam minima delectus animi laborum enim eum nesciunt cum debitis. Magnam, voluptatibus assumenda.</p>
+
+    <!-- {{trips}} -->
+    {% for a in trips %}
+    <table>
+        <th>
+            <td>Name</td>
+            <td>Destination</td>
+            <td>Date</td>
+        </th>
+        <tr>
+            <td>{{a.name}}</td>
+            <td>{{a.Destination}}</td>
+            <td>{{a.travel_date}}</td>
+        </tr>
+    </table>
+    {% endfor %}
+</body>
+</html>
